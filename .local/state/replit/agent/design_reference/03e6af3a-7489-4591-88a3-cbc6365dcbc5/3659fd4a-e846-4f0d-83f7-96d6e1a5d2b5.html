@@ -1,0 +1,911 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Shree Mahakal Finance Service - 7.5% ROI Loans | Bhopal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e40af',
+                        'secondary': '#dc2626',
+                        'accent': '#059669',
+                        'muted': '#6b7280',
+                        'light-bg': '#fafafa'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-sans bg-light-bg text-gray-900">
+
+    <!-- @COMPONENT: Header [Navigation and logo placement] -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo placeholder -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-om text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold text-primary">Jay Shree Mahakal</h1>
+                        <p class="text-xs text-muted">Finance Service</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="#loans" class="text-gray-700 hover:text-primary font-medium">Loans</a>
+                    <a href="#emi-calculator" class="text-gray-700 hover:text-primary font-medium">EMI Calculator</a>
+                    <a href="#dsa-partner" class="text-gray-700 hover:text-primary font-medium">DSA Partner</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" data-event="click:toggleMobileMenu">
+                    <i class="fas fa-bars text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: HeroBanner [Main promotional section with ROI highlight] -->
+    <section id="home" class="bg-gradient-to-r from-primary to-blue-600 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-secondary/20 text-secondary-light px-4 py-2 rounded-full mb-6">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span class="font-semibold">SPECIAL OFFER - Limited Time</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="text-secondary">7.5% ROI</span><br/>
+                        <span>Reducing Interest</span><br/>
+                        <span class="text-yellow-300">Fast & Secure Loans</span>
+                    </h1>
+                    
+                    <p class="text-xl mb-8 text-blue-100">Get instant approval with minimum documentation and maximum security in Bhopal, Madhya Pradesh</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-secondary hover:bg-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition-colors" data-event="click:openApplicationForm">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Apply Now
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-colors" data-event="click:scrollToCalculator">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Calculate EMI
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Modern finance consultation meeting in India -->
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Finance consultation meeting" class="rounded-2xl shadow-2xl" />
+                    
+                    <!-- Floating stats cards -->
+                    <div class="absolute -top-4 -left-4 bg-white text-gray-800 p-4 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-secondary">₹50L+</div>
+                        <div class="text-sm text-muted">Loans Disbursed</div>
+                    </div>
+                    
+                    <div class="absolute -bottom-4 -right-4 bg-white text-gray-800 p-4 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-accent">500+</div>
+                        <div class="text-sm text-muted">Happy Customers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroBanner -->
+
+    <!-- @COMPONENT: LoanHighlights [Key features and benefits] -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Jay Shree Mahakal Finance?</h2>
+                <p class="text-xl text-muted max-w-2xl mx-auto">Experience hassle-free lending with our customer-first approach and competitive rates</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Same-day Personal Loan</h3>
+                    <p class="text-muted">Get loan approval and disbursement within 24 hours with minimal paperwork</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wallet text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Salary Eligibility</h3>
+                    <p class="text-muted">₹15k+ salary | Cash salary from ₹8k+ accepted with proper documentation</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-business-time text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Daily Business Funding</h3>
+                    <p class="text-muted">Keep your business running with our flexible daily funding solutions</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Maximum Security</h3>
+                    <p class="text-muted">Minimum documents required with bank-level security for all transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: LoanHighlights -->
+
+    <!-- @COMPONENT: LoanProducts [Different loan types available] -->
+    <section id="loans" class="py-16 bg-light-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Loan Products</h2>
+                <p class="text-xl text-muted">Choose the perfect loan solution for your needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Personal Loan Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Professional loan consultation -->
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Personal loan consultation" class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold">Personal Loan</h3>
+                            <div class="text-secondary font-bold text-xl">7.5% ROI</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6 text-muted">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Up to ₹10 Lakhs</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>24-hour approval</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Flexible tenure</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>No collateral required</li>
+                        </ul>
+                        
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" data-event="click:openPersonalLoanDashboard">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Business Loan Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Indian business professionals in meeting -->
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Business loan meeting" class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold">Business Loan</h3>
+                            <div class="text-secondary font-bold text-xl">8.5% ROI</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6 text-muted">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Up to ₹50 Lakhs</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Working capital solutions</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Quick processing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Business expansion support</li>
+                        </ul>
+                        
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" data-event="click:openBusinessLoanDashboard">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Daily Funding Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Secure banking technology -->
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Digital banking security" class="w-full h-48 object-cover" />
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold">Daily Funding</h3>
+                            <div class="text-secondary font-bold text-xl">9.0% ROI</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6 text-muted">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Daily cash flow support</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Flexible repayment</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Quick approval</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i>Small business friendly</li>
+                        </ul>
+                        
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" data-event="click:openDailyFundingDashboard">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: LoanProducts -->
+
+    <!-- @COMPONENT: EMICalculator [Interactive loan calculator] -->
+    <section id="emi-calculator" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">EMI Calculator</h2>
+                <p class="text-xl text-muted">Calculate your loan EMI instantly</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Calculator Form -->
+                    <div class="bg-light-bg p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-6">Loan Details</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Loan Amount (₹)</label>
+                                <input type="range" id="loanAmount" min="50000" max="5000000" value="500000" class="w-full mb-2" data-bind="calculator.loanAmount">
+                                <div class="flex justify-between text-sm text-muted">
+                                    <span>₹50,000</span>
+                                    <span id="loanAmountDisplay" class="font-semibold text-primary">₹5,00,000</span>
+                                    <span>₹50,00,000</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Tenure (Years)</label>
+                                <input type="range" id="tenure" min="1" max="30" value="5" class="w-full mb-2" data-bind="calculator.tenure">
+                                <div class="flex justify-between text-sm text-muted">
+                                    <span>1 Year</span>
+                                    <span id="tenureDisplay" class="font-semibold text-primary">5 Years</span>
+                                    <span>30 Years</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Interest Rate (%)</label>
+                                <input type="range" id="interestRate" min="5" max="20" value="7.5" step="0.1" class="w-full mb-2" data-bind="calculator.interestRate">
+                                <div class="flex justify-between text-sm text-muted">
+                                    <span>5%</span>
+                                    <span id="rateDisplay" class="font-semibold text-secondary">7.5%</span>
+                                    <span>20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Results -->
+                    <div class="space-y-6">
+                        <!-- EMI Result Card -->
+                        <div class="bg-gradient-to-r from-primary to-blue-600 text-white p-8 rounded-2xl">
+                            <h3 class="text-lg font-medium mb-2">Monthly EMI</h3>
+                            <div id="emiAmount" class="text-4xl font-bold mb-2" data-bind="calculator.emiAmount">₹9,915</div>
+                            <p class="text-blue-100">Per month for 5 years</p>
+                        </div>
+                        
+                        <!-- Breakdown Cards -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-accent/10 p-6 rounded-xl">
+                                <h4 class="text-sm font-medium text-muted mb-1">Total Amount</h4>
+                                <div id="totalAmount" class="text-2xl font-bold text-accent" data-bind="calculator.totalAmount">₹5,94,900</div>
+                            </div>
+                            
+                            <div class="bg-secondary/10 p-6 rounded-xl">
+                                <h4 class="text-sm font-medium text-muted mb-1">Total Interest</h4>
+                                <div id="totalInterest" class="text-2xl font-bold text-secondary" data-bind="calculator.totalInterest">₹94,900</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chart Container -->
+                        <div class="bg-light-bg p-6 rounded-xl">
+                            <canvas id="emiChart" width="300" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div class="text-center mt-12">
+                    <button class="bg-secondary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg mr-4 transition-colors" data-event="click:applyForCalculatedLoan">
+                        Apply for this Loan
+                    </button>
+                    <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors" data-event="click:contactUs">
+                        Speak to Expert
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: EMICalculator -->
+
+    <!-- @COMPONENT: TrustSection [Security and trust indicators] -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Trusted by 500+ Customers</h2>
+                <p class="text-xl text-blue-100">Your financial security is our top priority</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Bank-Level Security</h3>
+                    <p class="text-blue-100">256-bit SSL encryption for all transactions</p>
+                </div>
+                
+                <div>
+                    <div class="text-4xl mb-4"><i class="fas fa-user-check"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">RBI Compliant</h3>
+                    <p class="text-blue-100">Fully compliant with RBI guidelines</p>
+                </div>
+                
+                <div>
+                    <div class="text-4xl mb-4"><i class="fas fa-clock"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Quick Processing</h3>
+                    <p class="text-blue-100">Same-day approval and disbursement</p>
+                </div>
+                
+                <div>
+                    <div class="text-4xl mb-4"><i class="fas fa-headset"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-blue-100">Round-the-clock customer assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TrustSection -->
+
+    <!-- @COMPONENT: DocumentsRequired [Minimum documentation section] -->
+    <section class="py-16 bg-light-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Minimum Documents Required</h2>
+                <p class="text-xl text-muted">Simple documentation process for quick loan approval</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Personal Loan Documents -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary">Personal Loan Documents</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-accent/5 rounded-lg">
+                                <i class="fas fa-id-card text-accent text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Aadhaar Card</h4>
+                                    <p class="text-sm text-muted">Valid government-issued ID proof</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-primary/5 rounded-lg">
+                                <i class="fas fa-credit-card text-primary text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">PAN Card</h4>
+                                    <p class="text-sm text-muted">Income tax identification</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-secondary/5 rounded-lg">
+                                <i class="fas fa-receipt text-secondary text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Salary Slip</h4>
+                                    <p class="text-sm text-muted">Last 3 months salary evidence</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                                <i class="fas fa-university text-purple-600 text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Bank Statement</h4>
+                                    <p class="text-sm text-muted">Last 6 months transaction history</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Loan Documents -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary">Business Loan Documents</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-accent/5 rounded-lg">
+                                <i class="fas fa-building text-accent text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Business Registration</h4>
+                                    <p class="text-sm text-muted">Certificate of incorporation/partnership</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-primary/5 rounded-lg">
+                                <i class="fas fa-file-invoice text-primary text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">GST Registration</h4>
+                                    <p class="text-sm text-muted">Valid GST certificate</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-secondary/5 rounded-lg">
+                                <i class="fas fa-chart-line text-secondary text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Financial Statements</h4>
+                                    <p class="text-sm text-muted">Last 2 years P&L and Balance Sheet</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                                <i class="fas fa-piggy-bank text-purple-600 text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Business Bank Statements</h4>
+                                    <p class="text-sm text-muted">Last 12 months business account</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: DocumentsRequired -->
+
+    <!-- @COMPONENT: DSAPartner [Partner registration section] -->
+    <section id="dsa-partner" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Become a DSA Partner</h2>
+                <p class="text-xl text-muted">Join our network and earn attractive commissions</p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Benefits -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Why Partner with Us?</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-rupee-sign text-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold mb-2">Attractive Commission Structure</h4>
+                                    <p class="text-muted">Earn up to 2% commission per loan disbursement with performance-based incentives</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-users text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold mb-2">Dedicated Support Team</h4>
+                                    <p class="text-muted">Personal relationship manager to help you grow your business</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-laptop text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold mb-2">Digital Platform Access</h4>
+                                    <p class="text-muted">Online portal to manage leads, track commissions, and monitor applications</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold mb-2">Training & Marketing Support</h4>
+                                    <p class="text-muted">Comprehensive training programs and marketing materials provided</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Registration Form -->
+                    <div class="bg-light-bg p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-6">Partner Registration</h3>
+                        
+                        <form class="space-y-4" data-implementation="DSA partner registration form handling">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Full Name *</label>
+                                    <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-mock="true" placeholder="Enter full name" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Mobile Number *</label>
+                                    <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-mock="true" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-mock="true" placeholder="email@example.com" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">City *</label>
+                                <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-mock="true" required>
+                                    <option value="">Select City</option>
+                                    <option value="bhopal">Bhopal</option>
+                                    <option value="indore">Indore</option>
+                                    <option value="jabalpur">Jabalpur</option>
+                                    <option value="gwalior">Gwalior</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Experience in Finance Industry</label>
+                                <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-mock="true">
+                                    <option value="">Select Experience</option>
+                                    <option value="0-1">0-1 Years</option>
+                                    <option value="1-3">1-3 Years</option>
+                                    <option value="3-5">3-5 Years</option>
+                                    <option value="5+">5+ Years</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Upload KYC Documents</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                    <i class="fas fa-cloud-upload-alt text-3xl text-muted mb-3"></i>
+                                    <p class="text-muted">Drag & drop files here or <span class="text-primary cursor-pointer">browse</span></p>
+                                    <p class="text-sm text-muted mt-2">Aadhaar, PAN, and Address Proof (PDF/JPG, Max 5MB each)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" class="mt-1 mr-3" data-mock="true" required>
+                                <label class="text-sm text-muted">I agree to the <a href="#" class="text-primary hover:underline">Terms & Conditions</a> and authorize Jay Shree Mahakal Finance Service to contact me.</label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" data-event="click:submitDSAApplication">
+                                <i class="fas fa-handshake mr-2"></i>
+                                Submit Partnership Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: DSAPartner -->
+
+    <!-- @COMPONENT: ContactSection [Company contact information] -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-xl text-gray-300">Ready to help you with your financial needs</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Address</h4>
+                                    <p class="text-gray-300">Bhopal, Madhya Pradesh, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <a href="tel:+919162620791" class="text-gray-300 hover:text-accent transition-colors">+91 91626 207918</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fab fa-instagram text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Instagram</h4>
+                                    <a href="https://instagram.com/jayshreemahakalfinance" class="text-gray-300 hover:text-secondary transition-colors">@jayshreemahakalfinance</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-purple-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Business Hours</h4>
+                                    <p class="text-gray-300">Mon - Sat: 10:00 AM - 7:00 PM<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Links -->
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Quick Access Portals</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="/admin" class="bg-primary/20 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fas fa-user-cog mr-2"></i>Admin Login
+                                </a>
+                                <a href="/dsa" class="bg-accent/20 text-accent px-4 py-2 rounded-lg hover:bg-accent hover:text-white transition-colors">
+                                    <i class="fas fa-handshake mr-2"></i>DSA Portal
+                                </a>
+                                <a href="/user" class="bg-secondary/20 text-secondary px-4 py-2 rounded-lg hover:bg-secondary hover:text-white transition-colors">
+                                    <i class="fas fa-user mr-2"></i>User Portal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact Form -->
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-6">Quick Inquiry</h3>
+                        
+                        <form class="space-y-4" data-implementation="Contact form handling">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name *</label>
+                                <input type="text" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white" data-mock="true" placeholder="Your full name" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Mobile *</label>
+                                <input type="tel" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white" data-mock="true" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Loan Type *</label>
+                                <select class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white" data-mock="true" required>
+                                    <option value="">Select Loan Type</option>
+                                    <option value="personal">Personal Loan</option>
+                                    <option value="business">Business Loan</option>
+                                    <option value="daily-funding">Daily Funding</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white" rows="4" data-mock="true" placeholder="Tell us about your requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" data-event="click:submitContactForm">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer [Company footer with links] -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-om text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Jay Shree Mahakal</h3>
+                            <p class="text-sm text-gray-400">Finance Service</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Your trusted partner for all financial needs in Bhopal, Madhya Pradesh. Providing quick, secure, and affordable loan solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#loans" class="text-gray-400 hover:text-white transition-colors">Loan Products</a></li>
+                        <li><a href="#emi-calculator" class="text-gray-400 hover:text-white transition-colors">EMI Calculator</a></li>
+                        <li><a href="#dsa-partner" class="text-gray-400 hover:text-white transition-colors">DSA Partner</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Loan Types -->
+                <div>
+                    <h4 class="font-semibold mb-4">Loan Types</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Personal Loan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Business Loan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Daily Funding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Working Capital</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-gray-400"><i class="fas fa-phone mr-2 text-primary"></i>+91 91626 207918</p>
+                        <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Bhopal, MP</p>
+                        <p class="text-gray-400"><i class="fab fa-instagram mr-2 text-secondary"></i>@jayshreemahakalfinance</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-8 border-gray-800">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2024 Jay Shree Mahakal Finance Service. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms & Conditions</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @STATE: emiChart:object = null -->
+    <!-- @STATE: isCalculatorInitialized:boolean = false -->
+    
+    <script>
+        // TODO: Implement business logic, API calls, and state management
+        (function() {
+            // EMI Calculator Logic
+            let emiChart = null;
+            
+            function calculateEMI() {
+                const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+                const tenure = parseFloat(document.getElementById('tenure').value) * 12; // Convert years to months
+                const annualRate = parseFloat(document.getElementById('interestRate').value);
+                const monthlyRate = annualRate / 12 / 100;
+                
+                // EMI Calculation Formula
+                const emi = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenure) / (Math.pow(1 + monthlyRate, tenure) - 1);
+                const totalAmount = emi * tenure;
+                const totalInterest = totalAmount - loanAmount;
+                
+                // Update display values
+                document.getElementById('emiAmount').textContent = `₹${Math.round(emi).toLocaleString('en-IN')}`;
+                document.getElementById('totalAmount').textContent = `₹${Math.round(totalAmount).toLocaleString('en-IN')}`;
+                document.getElementById('totalInterest').textContent = `₹${Math.round(totalInterest).toLocaleString('en-IN')}`;
+                
+                // Update range display values
+                document.getElementById('loanAmountDisplay').textContent = `₹${Math.round(loanAmount).toLocaleString('en-IN')}`;
+                document.getElementById('tenureDisplay').textContent = `${document.getElementById('tenure').value} Years`;
+                document.getElementById('rateDisplay').textContent = `${annualRate}%`;
+                
+                // Update pie chart
+                updateChart(loanAmount, totalInterest);
+                
+                return { emi, totalAmount, totalInterest, loanAmount };
+            }
+            
+            function updateChart(principal, interest) {
+                const ctx = document.getElementById('emiChart').getContext('2d');
+                
+                if (emiChart) {
+                    emiChart.destroy();
+                }
+                
+                emiChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Principal Amount', 'Interest Amount'],
+                        datasets: [{
+                            data: [principal, interest],
+                            backgroundColor: ['#1e40af', '#dc2626'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 15
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Initialize calculator
+            function initializeCalculator() {
+                const sliders = ['loanAmount', 'tenure', 'interestRate'];
+                
+                sliders.forEach(sliderId => {
+                    const slider = document.getElementById(sliderId);
+                    if (slider) {
+                        slider.addEventListener('input', calculateEMI);
+                    }
+                });
+                
+                // Initial calculation
+                calculateEMI();
+            }
+            
+            // Smooth scrolling for navigation
+            function initializeNavigation() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+            
+            // Form validation helpers
+            function validateForm(formElement) {
+                const requiredFields = formElement.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('border-red-500');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('border-red-500');
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            // Initialize all functionality when DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                initializeCalculator();
+                initializeNavigation();
+                
+                // Form submission handlers (mock)
+                document.querySelectorAll('form').forEach(form => {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        if (validateForm(this)) {
+                            // Mock success message
+                            alert('Thank you for your inquiry! Our team will contact you shortly.');
+                            this.reset();
+                        } else {
+                            alert('Please fill in all required fields.');
+                        }
+                    });
+                });
+            });
+            
+        })();
+    </script>
+</body>
+</html>
